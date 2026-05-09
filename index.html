@@ -549,17 +549,10 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-text { padding: 8rem 2rem 3rem; text-align: center; }
-      .hero-desc { margin-left: auto; margin-right: auto; }
-      .hero-image { height: 60vh; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .training-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item.tall { grid-row: span 1; aspect-ratio: 1; }
-      .gallery-item.wide { grid-column: span 1; }
+      .hero { grid-template-columns: 1fr 1fr; }
+      .hero-text { padding: 6rem 2rem 3rem; }
       .banner-overlay { padding: 0 2rem; }
+      .banner-text { max-width: 300px; }
     }
 
     @media (max-width: 768px) {
@@ -576,10 +569,91 @@
       .nav-links.active { display: flex; }
       .nav-links a { font-size: 0.9rem; }
       .menu-toggle { display: flex; z-index: 101; }
+
       section { padding: 4rem 1.5rem; }
-      .about-stats { flex-wrap: wrap; }
+
+      /* Hero: mantém 2 colunas como desktop */
+      .hero { grid-template-columns: 1fr 1fr; min-height: 70vh; }
+      .hero-text { padding: 5rem 1.5rem 2rem; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero-desc { font-size: 0.82rem; margin-bottom: 1.5rem; }
+      .btn { padding: 0.7rem 1.8rem; font-size: 0.65rem; }
+
+      /* About: mantém 2 colunas */
+      .about-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .about-text p { font-size: 0.82rem; }
+      .stat-num { font-size: 1.8rem; }
+      .stat-text { font-size: 0.6rem; }
+      .about-stats { gap: 1rem; }
+
+      /* Gallery: mantém 4 colunas como desktop */
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 0.3rem; }
+      .gallery-item.tall { grid-row: span 2; }
+
+      /* Training: mantém 2 colunas */
+      .training-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .training-card { padding: 1.5rem; }
+      .training-card h3 { font-size: 1.1rem; margin-bottom: 1rem; }
+      .training-card li { font-size: 0.75rem; padding: 0.35rem 0 0.35rem 0.8rem; }
+      .training-desc { font-size: 0.82rem; margin-bottom: 2rem; }
+
+      /* Services: mantém 3 colunas */
+      .services-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+      .service-card-img { height: 140px; }
+      .service-card-body { padding: 0.8rem; }
+      .service-card-body h3 { font-size: 0.9rem; }
+      .service-card-body p { font-size: 0.65rem; }
+
+      /* Banner */
+      .banner { height: 35vh; min-height: 200px; }
+      .banner-overlay { padding: 0 1.5rem; }
+      .banner-text .section-title { font-size: 1.4rem; }
+      .banner-text p { font-size: 0.75rem; }
+
+      /* Contact */
       .contact-info { gap: 1.5rem; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-info-value { font-size: 1rem; }
+      .contact-desc { font-size: 0.82rem; }
+
+      /* Section titles */
+      .section-title { font-size: 1.5rem; }
+      .section-label { font-size: 0.6rem; }
+
+      .whatsapp-float { width: 48px; height: 48px; bottom: 1.2rem; right: 1.2rem; }
+      .whatsapp-float svg { width: 24px; height: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { grid-template-columns: 1fr 1fr; min-height: 60vh; }
+      .hero-text { padding: 4.5rem 1rem 1.5rem; }
+      .hero h1 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+      .hero-subtitle { font-size: 0.55rem; margin-bottom: 0.8rem; }
+      .hero-desc { font-size: 0.72rem; line-height: 1.6; margin-bottom: 1.2rem; }
+      .btn { padding: 0.6rem 1.4rem; font-size: 0.6rem; }
+
+      .about-grid { gap: 1rem; }
+      .about-text p { font-size: 0.75rem; }
+      .stat-num { font-size: 1.5rem; }
+      .about-stats { gap: 0.8rem; margin-top: 1.5rem; padding-top: 1rem; }
+
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 0.2rem; }
+
+      .services-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+      .service-card-img { height: 100px; }
+      .service-card-body { padding: 0.6rem; }
+      .service-card-body h3 { font-size: 0.75rem; }
+      .service-card-body p { font-size: 0.55rem; }
+
+      .training-card { padding: 1rem; }
+      .training-card h3 { font-size: 0.95rem; }
+      .training-card li { font-size: 0.68rem; }
+
+      .banner { height: 30vh; min-height: 180px; }
+      .banner-text .section-title { font-size: 1.2rem; }
+
+      section { padding: 3rem 1rem; }
+      .section-title { font-size: 1.3rem; }
+      .divider { margin-bottom: 1.5rem; }
     }
   </style>
 </head>
